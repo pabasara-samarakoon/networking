@@ -1,0 +1,461 @@
+Router>enable
+Router#inerface configure
+                ^
+% Invalid input detected at '^' marker.
+	
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.198.1.1 255.255.255.0
+Router(config-if)#show
+                    ^
+% Invalid input detected at '^' marker.
+	
+Router(config-if)#show interfaces
+                    ^
+% Invalid input detected at '^' marker.
+	
+Router(config-if)#exit
+Router(config)#exit
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router#show
+% Incomplete command.
+Router#show interfaces
+GigabitEthernet0/0 is administratively down, line protocol is down (disabled)
+  Hardware is CN Gigabit Ethernet, address is 0000.0c38.4b01 (bia 0000.0c38.4b01)
+  Internet address is 192.198.1.1/24
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 100Mb/s, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last input 00:00:08, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0 (size/max/drops); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue :0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 watchdog, 1017 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/1 is administratively down, line protocol is down (disabled)
+  Hardware is CN Gigabit Ethernet, address is 0000.0c38.4b02 (bia 0000.0c38.4b02)
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 100Mb/s, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last input 00:00:08, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0 (size/max/drops); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue :0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 watchdog, 1017 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Vlan1 is administratively down, line protocol is down
+  Hardware is CPU Interface, address is 0060.2f70.5485 (bia 0060.2f70.5485)
+  MTU 1500 bytes, BW 100000 Kbit, DLY 1000000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 21:40:21, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     1682 packets input, 530955 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicast)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     563859 packets output, 0 bytes, 0 underruns
+     0 output errors, 23 interface resets
+     0 output buffer failures, 0 output buffers swapped out
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname myouter
+myouter(config)#exit
+myouter#
+%SYS-5-CONFIG_I: Configured from console by console
+
+myouter#?
+Exec commands:
+  <1-99>      Session number to resume
+  auto        Exec level Automation
+  clear       Reset functions
+  clock       Manage the system clock
+  configure   Enter configuration mode
+  connect     Open a terminal connection
+  copy        Copy from one file to another
+  debug       Debugging functions (see also 'undebug')
+  delete      Delete a file
+  dir         List files on a filesystem
+  disable     Turn off privileged commands
+  disconnect  Disconnect an existing network connection
+  enable      Turn on privileged commands
+  erase       Erase a filesystem
+  exit        Exit from the EXEC
+  logout      Exit from the EXEC
+  mkdir       Create new directory
+  more        Display the contents of a file
+  no          Disable debugging informations
+  ping        Send echo messages
+  reload      Halt and perform a cold restart
+  resume      Resume an active network connection
+  rmdir       Remove existing directory
+  send        Send a message to other tty lines
+  setup       Run the SETUP command facility
+  show        Show running system information
+  ssh         Open a secure shell client connection
+  telnet      Open a telnet connection
+  terminal    Set terminal line parameters
+  traceroute  Trace route to destination
+  undebug     Disable debugging functions (see also 'debug')
+  vlan        Configure VLAN parameters
+  write       Write running configuration to memory, network, or terminal
+myouter#
+myouter#
+myouter#co?
+configure  connect  copy  
+myouter#co
+% Ambiguous command: "co"
+myouter#clock ?
+  set  Set the time and date
+myouter#show version
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Thurs 5-Jan-12 15:41 by pt_team
+
+ROM: System Bootstrap, Version 15.1(4)M4, RELEASE SOFTWARE (fc1)
+cisco2901 uptime is 35 minutes, 23 seconds
+System returned to ROM by power-on
+System image file is "flash0:c2900-universalk9-mz.SPA.151-1.M4.bin"
+Last reload type: Normal Reload
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+myouter#show hardware
+              ^
+% Invalid input detected at '^' marker.
+	
+myouter#show history
+  enable
+  inerface configure
+  configure terminal
+  show
+  show interfaces
+  configure terminal
+  co
+  show version
+  show hardware
+  show history
+myouter#terminal history size 30
+myouter#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+myouter(config)#enable password MYPASSWORD
+myouter(config)#enable secret MYPASSWORD2
+myouter(config)#line console 0
+myouter(config-line)#login
+% Login disabled on line 0, until 'password' is set
+myouter(config-line)#password cisco1234
+myouter(config-line)#exec-timeout 0 0
+myouter(config-line)#logging synchronous
+myouter(config-line)#line vty 0 4
+myouter(config-line)#login
+% Login disabled on line 388, until 'password' is set
+% Login disabled on line 389, until 'password' is set
+% Login disabled on line 390, until 'password' is set
+% Login disabled on line 391, until 'password' is set
+% Login disabled on line 392, until 'password' is set
+myouter(config-line)#password cisco1234
+myouter(config-line)#exec-timeout 0 0
+myouter(config-line)#exit
+myouter(config)#line vty 0 4
+myouter(config-line)#login
+myouter(config-line)#password cisco1234
+myouter(config-line)#exec-timeout 0 0
+myouter(config-line)#logging synchronous
+myouter(config-line)#exec-timeout 2 30
+myouter(config-line)#service password-encryption
+myouter(config)#interface ethernet 0
+                                    ^
+% Invalid input detected at '^' marker.
+	
+myouter(config)#interface gigabitEthernel 0/0
+                                        ^
+% Invalid input detected at '^' marker.
+	
+myouter(config)#interface fastethernet 0/2
+%Invalid interface type and number
+myouter(config)#interface fa 0/0
+%Invalid interface type and number
+myouter(config)#no shutdown
+                    ^
+% Invalid input detected at '^' marker.
+	
+myouter(config)#ip address 192.198.1.1 255.255.255.0
+                    ^
+% Invalid input detected at '^' marker.
+	
+myouter(config)#interface fastethernet 0/2
+%Invalid interface type and number
+myouter(config)#interface gigabitEternet 0/0
+                                   ^
+% Invalid input detected at '^' marker.
+	
+myouter(config)#interface gigabitEthernet 0/0
+myouter(config-if)#no shutdown
+
+myouter(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
+
+myouter(config-if)#shutdown
+
+myouter(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to administratively down
+
+myouter(config-if)#ip address 192.198.1.1 255.255.255.0
+myouter(config-if)#ip address 192.168.1.2 255.255.255.0
+myouter(config-if)#ip address 192.168.1.1 255.255.255.0
+myouter(config-if)#ip address 192.168.1.2 255.255.255.0 secondary
+                                                        ^
+% Invalid input detected at '^' marker.
+	
+myouter(config-if)#exit
+myouter(config)#interface serial 0
+                                  ^
+% Invalid input detected at '^' marker.
+	
+myouter(config)#interface gigabitEthernet 0/0
+myouter(config-if)# clock rate 64000
+                     ^
+% Invalid input detected at '^' marker.
+	
+myouter(config-if)#clock rate 64000
+                    ^
+% Invalid input detected at '^' marker.
+	
+myouter(config-if)#exit
+myouter(config)#exit
+myouter#
+%SYS-5-CONFIG_I: Configured from console by console
+
+myouter#show interfaces
+GigabitEthernet0/0 is administratively down, line protocol is down (disabled)
+  Hardware is CN Gigabit Ethernet, address is 0000.0c38.4b01 (bia 0000.0c38.4b01)
+  Internet address is 192.168.1.1/24
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 100Mb/s, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last input 00:00:08, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0 (size/max/drops); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue :0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 watchdog, 1017 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/1 is administratively down, line protocol is down (disabled)
+  Hardware is CN Gigabit Ethernet, address is 0000.0c38.4b02 (bia 0000.0c38.4b02)
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full-duplex, 100Mb/s, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00, 
+  Last input 00:00:08, output 00:00:05, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0 (size/max/drops); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue :0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts, 0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 watchdog, 1017 multicast, 0 pause input
+     0 input packets with dribble condition detected
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier
+     0 output buffer failures, 0 output buffers swapped out
+Vlan1 is administratively down, line protocol is down
+  Hardware is CPU Interface, address is 0060.2f70.5485 (bia 0060.2f70.5485)
+  MTU 1500 bytes, BW 100000 Kbit, DLY 1000000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 21:40:21, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     1682 packets input, 530955 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicast)
+     0 runts, 0 giants, 0 throttles
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     563859 packets output, 0 bytes, 0 underruns
+     0 output errors, 23 interface resets
+     0 output buffer failures, 0 output buffers swapped out
+myouter#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+myouter(config)#interface gigabitEthernet 0/1
+myouter(config-if)#shutdown
+myouter(config-if)#ip address 10.10.1.2 10.10.255
+                                        ^
+% Invalid input detected at '^' marker.
+	
+myouter(config-if)#ip address 10.10.1.2 255.255.255.0
+myouter(config-if)#no shutdown
+
+myouter(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+myouter(config-if)#copy run
+                    ^
+% Invalid input detected at '^' marker.
+	
+myouter(config-if)#copy running-config startup-config
+                    ^
+% Invalid input detected at '^' marker.
+	
+myouter(config-if)#exit
+myouter(config)#exit
+myouter#
+%SYS-5-CONFIG_I: Configured from console by console
+
+myouter#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+myouter#System Bootstrap, Version 15.1(4)M4, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2010 by cisco Systems, Inc.
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2901/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC disabled
+
+Readonly ROMMON initialized
+
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+IOS Image Load Test
+___________________
+Digitally Signed Release Software
+program load complete, entry point: 0x81000000, size: 0x3bcd3d8
+Self decompressing the image :
+########################################################################## [OK]
+Smart Init is enabled
+smart init is sizing iomem
+                  TYPE      MEMORY_REQ
+           HWIC Slot 0      0x00200000
+           HWIC Slot 1      0x00200000
+           HWIC Slot 2      0x00200000     Onboard devices &
+          buffer pools      0x0228F000
+-----------------------------------------------
+                TOTAL:      0x03A8F000
+Rounded IOMEM up to: 61Mb.
+Using 6 percent iomem. [61Mb/512Mb]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.1(4)M5, RELEASE SOFTWARE (fc2)Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2007 by Cisco Systems, Inc.
+Compiled Wed 18-Jul-07 04:52 by pt_team
+Image text-base: 0x2100F918, data-base: 0x24729040
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco CISCO2901/K9 (revision 1.0) with 491520K/32768K bytes of memory.
+Processor board ID FTX152400KS
+4 FastEthernet interface(s)
+2 Gigabit Ethernet interfaces
+2 Low-speed serial(sync/async) network interface(s)
+DRAM configuration is 64 bits wide with parity disabled.
+255K bytes of non-volatile configuration memory.
+249856K bytes of ATA System CompactFlash 0 (Read/Write)
+
+Press RETURN to get started!
+
